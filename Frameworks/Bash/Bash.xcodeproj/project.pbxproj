@@ -1,0 +1,348 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		794D58931FC0CB4300AF4592 /* BashService.xpc in CopyFiles */ = {isa = PBXBuildFile; fileRef = 794D58881FC0CB4300AF4592 /* BashService.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		794D589A1FC0CB6100AF4592 /* ServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794D58971FC0CB6000AF4592 /* ServiceDelegate.swift */; };
+		794D589B1FC0CB6100AF4592 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794D58981FC0CB6000AF4592 /* main.swift */; };
+		794D589C1FC0CB6100AF4592 /* BashService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794D58991FC0CB6100AF4592 /* BashService.swift */; };
+		794D589E1FC0CB9B00AF4592 /* BashXPCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9556812C1EC900B50092C866 /* BashXPCProtocol.swift */; };
+		794D589F1FC0CD2200AF4592 /* Shell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952C038C1EBA15D7000E1707 /* Shell.swift */; };
+		794D58A01FC0CD2500AF4592 /* Bash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952C038D1EBA15D7000E1707 /* Bash.swift */; };
+		79AAC1DB1FBAFBE8004A14BE /* BashServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AAC1DA1FBAFBE8004A14BE /* BashServiceManager.swift */; };
+		952C03831EBA157B000E1707 /* Bash.h in Headers */ = {isa = PBXBuildFile; fileRef = 952C03751EBA157B000E1707 /* Bash.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		952C038E1EBA15D7000E1707 /* Shell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952C038C1EBA15D7000E1707 /* Shell.swift */; };
+		952C038F1EBA15D7000E1707 /* Bash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952C038D1EBA15D7000E1707 /* Bash.swift */; };
+		9556812D1EC900B50092C866 /* BashXPCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9556812C1EC900B50092C866 /* BashXPCProtocol.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		794D58911FC0CB4300AF4592 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 952C03691EBA157B000E1707 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 794D58871FC0CB4300AF4592;
+			remoteInfo = BashService;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		794D58821FC0CAD900AF4592 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/XPCServices";
+			dstSubfolderSpec = 16;
+			files = (
+				794D58931FC0CB4300AF4592 /* BashService.xpc in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		794D58881FC0CB4300AF4592 /* BashService.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = BashService.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
+		794D58901FC0CB4300AF4592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		794D58971FC0CB6000AF4592 /* ServiceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceDelegate.swift; sourceTree = "<group>"; };
+		794D58981FC0CB6000AF4592 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		794D58991FC0CB6100AF4592 /* BashService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BashService.swift; sourceTree = "<group>"; };
+		794D589D1FC0CB8F00AF4592 /* BashService.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BashService.xcconfig; sourceTree = "<group>"; };
+		7965B93F1FBAF0DC0018E272 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		7965B9401FBAF0DC0018E272 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		79AAC1DA1FBAFBE8004A14BE /* BashServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BashServiceManager.swift; sourceTree = "<group>"; };
+		952C03721EBA157B000E1707 /* Bash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Bash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		952C03751EBA157B000E1707 /* Bash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bash.h; sourceTree = "<group>"; };
+		952C03761EBA157B000E1707 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		952C038C1EBA15D7000E1707 /* Shell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shell.swift; sourceTree = "<group>"; };
+		952C038D1EBA15D7000E1707 /* Bash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bash.swift; sourceTree = "<group>"; };
+		9556812C1EC900B50092C866 /* BashXPCProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BashXPCProtocol.swift; sourceTree = "<group>"; };
+		95A196CC1EC5F81100556F2A /* Bash.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Bash.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		794D58851FC0CB4300AF4592 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		952C036E1EBA157B000E1707 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		794D58891FC0CB4300AF4592 /* BashService */ = {
+			isa = PBXGroup;
+			children = (
+				794D58901FC0CB4300AF4592 /* Info.plist */,
+				794D58981FC0CB6000AF4592 /* main.swift */,
+				794D58971FC0CB6000AF4592 /* ServiceDelegate.swift */,
+				794D58991FC0CB6100AF4592 /* BashService.swift */,
+			);
+			path = BashService;
+			sourceTree = "<group>";
+		};
+		952C03681EBA157B000E1707 = {
+			isa = PBXGroup;
+			children = (
+				95A196CB1EC5F81100556F2A /* Configuration */,
+				952C03741EBA157B000E1707 /* Source */,
+				794D58891FC0CB4300AF4592 /* BashService */,
+				952C03731EBA157B000E1707 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		952C03731EBA157B000E1707 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				952C03721EBA157B000E1707 /* Bash.framework */,
+				794D58881FC0CB4300AF4592 /* BashService.xpc */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		952C03741EBA157B000E1707 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				952C03751EBA157B000E1707 /* Bash.h */,
+				952C03761EBA157B000E1707 /* Info.plist */,
+				952C038C1EBA15D7000E1707 /* Shell.swift */,
+				952C038D1EBA15D7000E1707 /* Bash.swift */,
+				79AAC1DA1FBAFBE8004A14BE /* BashServiceManager.swift */,
+				9556812C1EC900B50092C866 /* BashXPCProtocol.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		95A196CB1EC5F81100556F2A /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				95A196CC1EC5F81100556F2A /* Bash.xcconfig */,
+				794D589D1FC0CB8F00AF4592 /* BashService.xcconfig */,
+				7965B9401FBAF0DC0018E272 /* Debug.xcconfig */,
+				7965B93F1FBAF0DC0018E272 /* Release.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		952C036F1EBA157B000E1707 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				952C03831EBA157B000E1707 /* Bash.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		794D58871FC0CB4300AF4592 /* BashService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 794D58941FC0CB4300AF4592 /* Build configuration list for PBXNativeTarget "BashService" */;
+			buildPhases = (
+				794D58841FC0CB4300AF4592 /* Sources */,
+				794D58851FC0CB4300AF4592 /* Frameworks */,
+				794D58861FC0CB4300AF4592 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BashService;
+			productName = BashService;
+			productReference = 794D58881FC0CB4300AF4592 /* BashService.xpc */;
+			productType = "com.apple.product-type.xpc-service";
+		};
+		952C03711EBA157B000E1707 /* Bash */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 952C03861EBA157B000E1707 /* Build configuration list for PBXNativeTarget "Bash" */;
+			buildPhases = (
+				952C036D1EBA157B000E1707 /* Sources */,
+				952C036E1EBA157B000E1707 /* Frameworks */,
+				952C036F1EBA157B000E1707 /* Headers */,
+				794D58821FC0CAD900AF4592 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				794D58921FC0CB4300AF4592 /* PBXTargetDependency */,
+			);
+			name = Bash;
+			productName = Bash;
+			productReference = 952C03721EBA157B000E1707 /* Bash.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		952C03691EBA157B000E1707 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Richard Nees";
+				TargetAttributes = {
+					794D58871FC0CB4300AF4592 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Manual;
+					};
+					952C03711EBA157B000E1707 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = L67SAKHR8M;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 952C036C1EBA157B000E1707 /* Build configuration list for PBXProject "Bash" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 952C03681EBA157B000E1707;
+			productRefGroup = 952C03731EBA157B000E1707 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				952C03711EBA157B000E1707 /* Bash */,
+				794D58871FC0CB4300AF4592 /* BashService */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		794D58861FC0CB4300AF4592 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		794D58841FC0CB4300AF4592 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				794D589A1FC0CB6100AF4592 /* ServiceDelegate.swift in Sources */,
+				794D589C1FC0CB6100AF4592 /* BashService.swift in Sources */,
+				794D589F1FC0CD2200AF4592 /* Shell.swift in Sources */,
+				794D58A01FC0CD2500AF4592 /* Bash.swift in Sources */,
+				794D589B1FC0CB6100AF4592 /* main.swift in Sources */,
+				794D589E1FC0CB9B00AF4592 /* BashXPCProtocol.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		952C036D1EBA157B000E1707 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9556812D1EC900B50092C866 /* BashXPCProtocol.swift in Sources */,
+				79AAC1DB1FBAFBE8004A14BE /* BashServiceManager.swift in Sources */,
+				952C038E1EBA15D7000E1707 /* Shell.swift in Sources */,
+				952C038F1EBA15D7000E1707 /* Bash.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		794D58921FC0CB4300AF4592 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 794D58871FC0CB4300AF4592 /* BashService */;
+			targetProxy = 794D58911FC0CB4300AF4592 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		794D58951FC0CB4300AF4592 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 794D589D1FC0CB8F00AF4592 /* BashService.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		794D58961FC0CB4300AF4592 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 794D589D1FC0CB8F00AF4592 /* BashService.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		952C03841EBA157B000E1707 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7965B9401FBAF0DC0018E272 /* Debug.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		952C03851EBA157B000E1707 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7965B93F1FBAF0DC0018E272 /* Release.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		952C03871EBA157B000E1707 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95A196CC1EC5F81100556F2A /* Bash.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		952C03881EBA157B000E1707 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95A196CC1EC5F81100556F2A /* Bash.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		794D58941FC0CB4300AF4592 /* Build configuration list for PBXNativeTarget "BashService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				794D58951FC0CB4300AF4592 /* Debug */,
+				794D58961FC0CB4300AF4592 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		952C036C1EBA157B000E1707 /* Build configuration list for PBXProject "Bash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				952C03841EBA157B000E1707 /* Debug */,
+				952C03851EBA157B000E1707 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		952C03861EBA157B000E1707 /* Build configuration list for PBXNativeTarget "Bash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				952C03871EBA157B000E1707 /* Debug */,
+				952C03881EBA157B000E1707 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 952C03691EBA157B000E1707 /* Project object */;
+}
