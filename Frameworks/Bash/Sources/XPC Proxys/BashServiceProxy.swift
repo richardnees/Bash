@@ -1,6 +1,6 @@
 import Foundation
 
-public struct BashServiceManager {
+public struct BashServiceProxy {
     public let errorHandler: ((Error) -> Void)
     public let service: BashXPCProtocol
     let xpcConnection = NSXPCConnection(serviceName: BashXPCProtocolName)
@@ -25,5 +25,9 @@ public struct BashServiceManager {
         }
         
         service = remoteService
+    }
+    
+    public static var isSupported: Bool {
+        return false
     }
 }

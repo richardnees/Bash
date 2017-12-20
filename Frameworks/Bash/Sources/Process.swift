@@ -1,30 +1,29 @@
 import Foundation
 
-public struct Shell {
+extension Process {
         
     // MARK: Syncronous
 
-    public static func sync(
+    public func sync(
         launchPath: String,
         arguments: [String],
         workingDirectory: String? = nil,
         environment: [String:String]? = nil) -> String {
         
-        let task = Process()
-        task.launchPath = launchPath
-        task.arguments = arguments
+        self.launchPath = launchPath
+        self.arguments = arguments
         
         if let workingDirectory = workingDirectory {
-            task.currentDirectoryPath = workingDirectory
+            currentDirectoryPath = workingDirectory
         }
 
         if let environment = environment {
-            task.environment = environment
+            self.environment = environment
         }
 
         let pipe = Pipe()
-        task.standardOutput = pipe
-        task.launch()
+        standardOutput = pipe
+        launch()
         
         let data = pipe.fileHandleForReading.readDataToEndOfFile()
         if let output = String(data: data, encoding: String.Encoding.utf8) {
@@ -39,7 +38,7 @@ public struct Shell {
     
     // MARK: Asyncronous
 
-    public static func async(
+    public func async(
         launchPath: String,
         arguments: [String],
         workingDirectory: String? = nil,
@@ -48,35 +47,37 @@ public struct Shell {
         completion: @escaping (_ completionString: String) -> ()) {
         
         DispatchQueue.global(qos: .background).async {
-            let task = Process()
-            task.launchPath = launchPath
-            task.arguments = arguments
+
+            self.launchPath = launchPath
+            self.arguments = arguments
             
             if let workingDirectory = workingDirectory {
-                task.currentDirectoryPath = workingDirectory
+                self.currentDirectoryPath = workingDirectory
             }
             
             if let environment = environment {
-                task.environment = environment
+                self.environment = environment
             }
 
             let pipe = Pipe()
-            task.standardOutput = pipe
-            task.launch()
+            self.standardOutput = pipe
+            self.launch()
             
-            let fileHandle = pipe.fileHandleForReading
             var output: String = ""
-            
-            repeat {
-                let data = fileHandle.availableData
-                if let string = String(data: data, encoding: String.Encoding.utf8) {
+            let handle = pipe.fileHandleForReading
+
+            handle.readabilityHandler = { pipe in
+                if let string = String(data: pipe.availableData, encoding: String.Encoding.utf8) {
                     output.append(string)
                     DispatchQueue.main.async {
                         progress(string.trimmingCharacters(in: .whitespacesAndNewlines))
                     }
                 }
-                fileHandle.waitForDataInBackgroundAndNotify()
-            } while fileHandle.availableData.count > 0
+            }
+            
+            self.terminationHandler = { _ in
+                handle.readabilityHandler = nil
+            }
             
             DispatchQueue.main.async {
                 completion(output)

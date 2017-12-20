@@ -14,24 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "952C03711EBA157B000E1707"
-               BuildableName = "Bash.framework"
-               BlueprintName = "Bash"
-               ReferencedContainer = "container:Bash.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "NO"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "796FB9971FE9BC1400F09272"
-               BuildableName = "BashTests.xctest"
-               BlueprintName = "BashTests"
-               ReferencedContainer = "container:Bash.xcodeproj">
+               BlueprintIdentifier = "79671C591FE9BF2A00FEFE4F"
+               BuildableName = "Example.app"
+               BlueprintName = "Example"
+               ReferencedContainer = "container:Example.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -44,15 +30,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "952C03711EBA157B000E1707"
-            BuildableName = "Bash.framework"
-            BlueprintName = "Bash"
-            ReferencedContainer = "container:Bash.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -67,15 +44,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "952C03711EBA157B000E1707"
-            BuildableName = "Bash.framework"
-            BlueprintName = "Bash"
-            ReferencedContainer = "container:Bash.xcodeproj">
+            BlueprintIdentifier = "79671C591FE9BF2A00FEFE4F"
+            BuildableName = "Example.app"
+            BlueprintName = "Example"
+            ReferencedContainer = "container:Example.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -88,10 +66,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "952C03711EBA157B000E1707"
-            BuildableName = "Bash.framework"
-            BlueprintName = "Bash"
-            ReferencedContainer = "container:Bash.xcodeproj">
+            BlueprintIdentifier = "79671C591FE9BF2A00FEFE4F"
+            BuildableName = "Example.app"
+            BlueprintName = "Example"
+            ReferencedContainer = "container:Example.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

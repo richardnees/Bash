@@ -2,6 +2,16 @@
 <Workspace
    version = "1.0">
    <Group
+      location = "container:"
+      name = "Package">
+      <FileRef
+         location = "group:Package.swift">
+      </FileRef>
+      <FileRef
+         location = "group:README.md">
+      </FileRef>
+   </Group>
+   <Group
       location = "group:Configuration"
       name = "Configuration">
       <FileRef
@@ -32,7 +42,18 @@
          location = "group:Applications.xcconfig">
       </FileRef>
    </Group>
-   <FileRef
-      location = "group:Frameworks/Bash/Bash.xcodeproj">
-   </FileRef>
+   <Group
+      location = "container:"
+      name = "Frameworks">
+      <FileRef
+         location = "group:Frameworks/Bash/Bash.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "Applications">
+      <FileRef
+         location = "group:/Users/richard/Github/Bash/Applications/Example/Example.xcodeproj">
+      </FileRef>
+   </Group>
 </Workspace>

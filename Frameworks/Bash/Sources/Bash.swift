@@ -18,12 +18,12 @@ public struct Bash {
         arguments: [String],
         workingDirectory: String? = nil,
         environment: [String:String]? = nil) -> String {
-        let whichPathForCommand = Shell.sync(
+        let whichPathForCommand = Process().sync(
             launchPath: bashPath,
             arguments: Bash.arguments(for: command),
             workingDirectory: workingDirectory,
             environment: environment)
-        return Shell.sync(launchPath: whichPathForCommand, arguments: arguments, workingDirectory: workingDirectory, environment: environment)
+        return Process().sync(launchPath: whichPathForCommand, arguments: arguments, workingDirectory: workingDirectory, environment: environment)
     }
 
     // MARK: Asyncronous
@@ -33,20 +33,20 @@ public struct Bash {
         arguments: [String],
         workingDirectory: String? = nil,
         environment: [String:String]? = nil,
-        progress: @escaping (_ progressString: String) -> (),
-        completion: @escaping (_ completionString: String) -> ()) {
+        progress: ((String) -> ())? = nil,
+        completion: @escaping (String) -> ()) {
         
-        let whichPathForCommand = Shell.sync(launchPath: bashPath, arguments: Bash.arguments(for: command), workingDirectory: workingDirectory, environment: nil)
+        let whichPathForCommand = Process().sync(launchPath: bashPath, arguments: Bash.arguments(for: command), workingDirectory: workingDirectory, environment: nil)
         
-        Shell.async(
+        Process().async(
             launchPath: whichPathForCommand,
             arguments: arguments,
             workingDirectory: workingDirectory,
             environment: environment,
-            progress: { (string) in
-                progress(string)
+            progress: { string in
+                progress?(string)
                 
-        }) { (output) in
+        }) { output in
             completion(output)
         }
     }
