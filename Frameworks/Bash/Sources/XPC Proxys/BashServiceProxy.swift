@@ -28,6 +28,12 @@ public struct BashServiceProxy {
     }
     
     public static var isSupported: Bool {
-        return false
+        let expectedURL = Bundle.main
+            .bundleURL
+            .appendingPathComponent("Contents")
+            .appendingPathComponent("XPCServices")
+            .appendingPathComponent("BashService.xpc")
+        
+        return FileManager.default.fileExists(atPath: expectedURL.path)
     }
 }

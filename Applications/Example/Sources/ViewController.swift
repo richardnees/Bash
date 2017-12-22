@@ -65,20 +65,21 @@ class ViewController: NSViewController {
         let command =  "ls"
         let arguments =  ["-la", path]
 
-        if BashServiceProxy.isSupported {
-            bashProxy?.service.run(command: command, arguments: arguments) { (reply) in
-                DispatchQueue.main.async {
-                    self.textView.string = reply ?? ""
-                }
-            }
-        } else {
+        guard let bashProxy = bashProxy else {
             Bash.async(command: command, arguments: arguments) { string in
                 DispatchQueue.main.async {
                     self.textView.string = string
                 }
             }
+            return
         }
         
+        bashProxy.service.run(command: command, arguments: arguments) { (reply) in
+            DispatchQueue.main.async {
+                self.textView.string = reply ?? ""
+            }
+        }
+
     }
 }
 
