@@ -53,7 +53,7 @@
       location = "container:"
       name = "Applications">
       <FileRef
-         location = "group:/Users/richard/Github/Bash/Applications/Example/Example.xcodeproj">
+         location = "group:Applications/Example/Example.xcodeproj">
       </FileRef>
    </Group>
 </Workspace>
