@@ -247,7 +247,7 @@
 				TargetAttributes = {
 					794D58871FC0CB4300AF4592 = {
 						CreatedOnToolsVersion = 9.1;
-						LastSwiftMigration = 0920;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Manual;
 					};
 					796FB9971FE9BC1400F09272 = {
@@ -258,6 +258,7 @@
 					952C03711EBA157B000E1707 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = L67SAKHR8M;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Manual;
 					};
 				};
